@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fabio dos Santos Augusto - Portfólio</title>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    /* Reset de estilos */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e0e11;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* Menu */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a1a1d;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00aaff;
+    }
+
+    /* Container principal */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Barra lateral */
+    .sidebar {
+      width: 25%;
+      background-color: #1a1a1d;
+      padding: 20px;
+      border-radius: 10px;
+      min-height: 100vh;
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar h4 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+    }
+
+    .sidebar h5 {
+      font-size: 1rem;
+      color: #aaaaaa;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+
+    .sidebar ul li p {
+      margin: 0;
+    }
+
+    .sidebar ul li a {
+      color: #00aaff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      color: #007bff;
+    }
+
+    /* Main Content */
+    .main-content {
+      width: 75%;
+      padding: 20px;
+      background-color: #1f1f23;
+      border-radius: 10px;
+      color: #ffffff;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1f1f23;
+      padding: 20px;
+      border-radius: 10px;
+      color: #ffffff;
+      text-align: justify;
+    }
+
+    .main-content p {
+      text-align: justify;
+    }
+
+    .clientes {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .cliente {
+      background-color: #1f1f23;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar,
+      .main-content {
+        width: 100%;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Sobre Mim</a></li>
+      <li><a href="pretencoesfutura.html">Pretenções</a></li>
+      <li><a href="portifolioatualizado_pronto.html">Portifólio</a></li>
+      <li><a href="meucurriculum.html">Curriculum</a></li>
+      <li><a href="mapacontato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Container Principal -->
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar"><br>
+      <img src="https://avatars.githubusercontent.com/u/209834157?v=4" alt="Fabio Dos Santos Augusto"><br>
+      <h5>Fabio dos Santos Augusto</h5><br>
+      <h6>Desenvolvedor | Junior</h6><br>
+
+      <ul class="contacts-list">
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">E-Mail</p>
+            <a href="mailto:fabioccb35@gmail.com" class="contact-link">fabioccb35@gmail.com</a><br>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="phone-portrait-outline"></ion-icon>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Telefone</p>
+            <a href="https://wa.me/5511962992187" class="contact-link">+55 (11) 96299-2187</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="calendar-outline"></ion-icon>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Data de Nascimento</p>
+            <time datetime="1982-06-23">08 de Maio de 1977</time>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+          <div class="contact-info">
+            <address>Osasco, SP, Brasil</address>
+          </div>
+        </li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <ul class="social-list">
+        <li><a href="https://github.com/FABIOAUGUSTO368" target="_blank" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li><a href="https://linkedin.com/in/fabio-augusto-38949567/" target="_blank" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/fabioccb47/" target="_blank" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="section" id="about"><br>
+        <h2>Sobre Mim</h2><br>
+        <p>Olá! Sou <strong>Fabio dos Santos Augusto,</strong> profissional com experiência consolidada na área administrativa e comercial, com atuação em empresas renomadas. Trabalhei diretamente com controle de estoque, gestão de vendas, organização de documentos e apoio logístico, utilizando diariamente ferramentas como SAP, BI, Power Query e Smartsheet. Hoje, estou em transição de carreira para o universo da tecnologia, estudando desenvolvimento com Java e explorando soluções criativas para automatizar e aprimorar processos empresariais. Meu objetivo é unir minha visão de negócio à lógica de programação, contribuindo para projetos ágeis e inovadores.</p>
+      </div><br>
+
+      <div class="section" id="Resume">
+        <h2>🎯 Áreas de Atuação:</h2>
+        <div class="cards">
+          <div class="card">
+            <p>Varejo / Merchandising.</p><br>
+            Organização de gôndolas Merchandising visual. Exposição estratégica de produtos. Fotografia comercial e comunicação visual. Negociação com pontos de venda. Monitoramento da Vendas.
+          </div>
+
+          <div class="card">
+            <p>Administração e Gestão de Dados.</p><br>
+            <p>Em minha tragetória como Assistente Administrativo e Gestão de Dados, obtive experiência em:</p>
+            Análise de dados e indicadores. Preenchimento e atualização de planilhas e dashboards. Elaboração de relatórios e apresentações. Uso de ferramentas como SAP, Power BI, Google Maps, BW. Suporte técnico a sistemas e processos internos.
+          </div>
+
+          <div class="card">
+            <p>Gestão de Pessoas - Supervisão de Campo (indiretamente).</p><br>
+            Mesmo sem ser sua função principal, eu realizava atividades típicas de colaboradores em campo via App como: Acompanhamento de colaboradores em tempo real. Feedback constante. Comunicação eficaz com equipes.
+          </div>
+
+          <div class="card">
+            <p>Manutenção e Suporte.</p>
+            Serviços contínuos de manutenção e suporte para garantir o desempenho de suas aplicações. Manutenção de softwares.
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="portfolio"></div>
+    </div>
+  </div>
+
+  <div class="contato-ions">
+    <a href="mailto:fabionegocioshome@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/FABIOAUGUSTO368?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+
+</body>
+
+</html>

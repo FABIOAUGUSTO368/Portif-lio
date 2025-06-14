@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carreira Profissional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">      
+  <!-- Link corrigido do jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>    
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: #1e1e1e;
+      padding: 1rem;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #00bfff;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #00bfff;
+      color: #121212;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      position: fixed;
+      top: 70px;
+      right: 30px;
+      z-index: 999;
+      box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
+    }
+    .download-btn i {
+      margin-right: 8px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      position: relative;
+    }
+    section {
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      border-left: 4px solid #00bfff;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+    .card {
+      background-color: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .progress-container {
+      margin-bottom: 15px;
+    }
+    .progress-label {
+      margin-bottom: 5px;
+    }
+    .progress-bar {
+      background-color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 10px;
+    }
+    .progress {
+      height: 10px;
+      background-color: #00bfff;
+    }
+    .project-card {
+      border: 1px solid #333;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .project-card i {
+      color: #00bfff;
+      margin-right: 8px;
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact-icons a {
+      color: #00bfff;
+      margin: 0 10px;
+      font-size: 1.5em;
+    }
+    form {
+      margin-top: 20px;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #00bfff;
+      color: #121212;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    strong {
+      color: #00bfff;
+    }
+    #top-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #00bfff;
+      color: #121212;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+      box-shadow: 0 0 10px #00bfff88;
+    }
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      .download-btn {
+        width: 90%;
+        text-align: center;
+        right: 5%;
+        top: 70px;
+        font-size: 14px;
+      }
+      #top-btn {
+        padding: 10px 14px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" target="_blank">Voltar à página principal</a>
+  </nav>
+
+  <!-- Botão "Baixar Currículo" -->
+  <a class="download-btn" href="Curriculo_Fabio_dos_Santos_Augusto.pdf" download>
+    <i class="fas fa-download"></i> Baixar Currículo
+  </a>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <section><h1>Carreira</h1></section>
+
+    <!-- Formação Acadêmica -->
+    <section id="formacao">
+      <h2>Formação Acadêmica</h2>
+      <div class="card">
+        <p><strong>Cursando:</strong> MBA em Gerenciamento de Projetos – Centro de Estudos Cenes</p>
+        <p><strong>Graduação:</strong> Tecnologia em Marketing – Universidade Anhanguera (2019)</p>
+        <p><strong>Idiomas:</strong> Inglês (Básico), Espanhol (Básico) – Coca Cola Femsa</p>
+      </div>
+    </section>
+
+    <!-- Certificados -->
+    <section>
+      <h2>Certificados</h2>
+      <div class="card">
+        <p><strong>Smartsheet</strong> – Udemy (2020)</p>
+        <p><strong>Inteligência Emocional</strong> – Conquer (2022)</p>
+        <p><strong>Inteligência Artificial</strong> – Curso Online</p>
+        <p><strong>Excel Básico:</strong> Planilhas, cálculos, tabelas dinâmicas, funções lógicas (SE, SES), funções de procura.</p>
+      </div>
+    </section>
+
+    <!-- Qualificação Profissional -->
+    <section>
+      <h2>Qualificação Profissional</h2>
+      <div class="card">
+        <p>Implementação de estratégias de merchandising para aumentar vendas e visibilidade da marca.</p>
+        <p>Conhecimentos em softwares: SAP, BW, Power BI, Power Query, Teams, Smartsheet.</p>
+        <p>Controle de itens com etiquetas e selos de identificação (WMF).</p>
+        <p>Conferência de produtos, apoio ao merchandising e gestão de documentos.</p>
+      </div>
+    </section>
+
+    <!-- Histórico Profissional -->
+    <section>
+      <h2>Histórico Profissional</h2>
+      <h2>Coca-Cola FEMSA - Abril/2015 a Abril/2024</h2>
+      <p><strong>Promotor Merchandising (2 anos):</strong></p>
+      Abastecimento e organização de gôndolas para maximizar visibilidade e venda de produtos. 
+      Implementação de estratégias de merchandising para impulsionar a marca e aumentar as vendas. Monitoramento de indicadores de desempenho e geração de relatórios para análise.
+      <p><strong>Assistente Administrativo Gestão de Dados (7 anos):</strong></p> 
+      Monitoramento de colaboradores em tempo real via app e Google Maps; 
+      Acompanhamento de desempenho e feedback construtivo; Comunicação clara e eficaz para garantir a coesão da equipe; Preenchimento de planilhas e dashboards com dados relevantes;
+      Análise de dados para identificar oportunidades de melhoria e tomar decisões estratégicas; Elaboração de relatórios e apresentações para comunicar insights à equipe de gestão; 
+      Atendimento de incidentes; Acompanhamento das implantações em produção; Realização de extrações de dados; Auxílio nos testes e homologação dos colaboradores na utilização de ferramentas e sistemas de gestão (SAP, BW, Power BI); 
+      Resolução de problemas técnicos; Manutenção da infraestrutura tecnológica e atualização de softwares.
+      <br><br>
+      <h2>RR Donnelley – Ago/2013 a Fev/2015</h2>
+      <h3>Editora e Gráfica Multinacional</h3>
+      <h4><strong>Auxiliar Operacional</strong></h4>
+      <p>Atuação nas áreas de produção e apoio técnico, com foco em controle de qualidade e processos químicos.<br>
+      Execução de marcação de itens com etiquetas e selos de identificação, utilizando ferramentas elétricas integradas ao sistema WMF.<br>
+      Preparação de tintas conforme especificações técnicas, garantindo a consistência de cores nos processos gráficos.<br>
+      Validação de inventários e controle de estoque, contribuindo para a acuracidade e rastreabilidade dos materiais.<br>
+      Apoio à equipe de produção gráfica, com foco em organização, segurança e cumprimento de prazos.</p>
+      <br>
+      <h2>Directlog Logística para E-commerce - Período: 2 anos e 4 meses</h2>
+      <h3><strong>Auxiliar Operacional</strong></h3>
+      <p>Responsável por etiquetagem técnica e marcação de produtos com equipamentos elétricos, garantindo identificação precisa e padronizada dos itens.
+      Participação ativa na validação de inventários físicos, colaborando com a equipe de controle para manter a acuracidade de estoque acima de 98%.
+      Apoio em processos logísticos integrados, como conferência de cargas, separação e controle de fluxo de pedidos.
+      Contribuição para a otimização do layout operacional e melhoria nos processos de identificação de produtos, reduzindo falhas de separação.</p>
+      <br>
+      <h2>Carrefour Comércio e Indústria – 3 anos e 6 meses</h2>
+      <h3>Empresa do Setor Varejista</h3>
+      <h4><strong>Conferente (8 meses)</strong></h4>
+      Responsável pela conferência de produtos no recebimento de mercadorias, assegurando conformidade com notas fiscais e padrões internos.<br>
+      Apoio às equipes de merchandising e logística, contribuindo para a organização e reposição estratégica de produtos no ponto de venda.<br>
+      <h4><strong>Auxiliar Administrativo</strong></h4>
+      Suporte aos setores de controle de vendas e gestão operacional, atuando diretamente com dados, planilhas e relatórios gerenciais.<br>
+      Auxílio na gestão de informações para executivos, revisão e organização de documentos administrativos, controle de indicadores e apoio em atividades de rotina da equipe.<br>
+      Participação ativa em processos de melhoria organizacional e comunicação entre setores.
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+      <h2>Minhas Habilidades</h2>
+      <div class="progress-container">
+        <div class="progress-label">Comunicação Escrita e Verbal (80%)</div>
+        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-label">Spring Framework - Iniciante (40%)</div>
+        <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-label">Banco de Dados (MySQL, PostgreSQL) (50%)</div>
+        <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-label">Docker - Em Curso (30%)</div>
+        <div class="progress-bar"><div class="progress" style="width: 30%;"></div></div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="project-card">
+        <p><i class="fas fa-chart-line"></i> Dashboard de Vendas com Power BI – Integração de dados SAP e análise de desempenho.</p>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="contact">
+        <div class="contact-icons">
+          <a href="mailto:fabionegocioshome@gmail.com?subject=Contato via Currículo&body=Olá, Fábio!" target="_blank"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/fabio-augusto-38949567/"   target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/FABIOAUGUSTO368?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <form>
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu e-mail" required />
+          <textarea rows="4" placeholder="Sua mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Botão voltar ao topo -->
+    <button id="top-btn" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script>
+      // Mostrar seções com efeito ao rolar
+      const sections = document.querySelectorAll('section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+      sections.forEach(section => observer.observe(section));
+
+      // Botão de voltar ao topo
+      const topBtn = document.getElementById('top-btn');
+      window.addEventListener('scroll', () => {
+        topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+      });
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
+</body>
+</html>

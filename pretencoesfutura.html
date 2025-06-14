@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1e1e1e;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    .navbar a.active {
+      color: #50b7ff;
+      font-weight: bold;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      padding: 40px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .portfolio h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .portfolio p {
+      text-align: justify;
+    }
+
+    /* Filtros */
+    .filters {
+      margin-bottom: 30px;
+    }
+
+    .filters button {
+      background: none;
+      border: none;
+      color: #ccc;
+      font-size: 1rem;
+      margin-right: 20px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      padding: 5px 0;
+      transition: 0.3s;
+    }
+
+    .filters button.active,
+    .filters button:hover {
+      color: #50b7ff;
+      border-color: #50b7ff;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #bbb;
+      margin-bottom: 10px;
+      line-height: 1.4;
+      text-align: justify;
+    }
+
+    .card .tag {
+      font-size: 0.8rem;
+      color: #50b7ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Voltar à página principal</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seção de Portfólio -->
+  <main class="portfolio">
+    <h1>Pretenções Futuras</h1>
+
+    <!-- Cards -->
+    <div class="cards">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <h3>Gestão Administrativa</h3>
+        <p>Ferramenta para controle financeiro, fluxo de caixa, produtividade e relatórios gerenciais. Desenvolvido com Java, Spring Boot, MySQL, API e Docker.</p>
+        <span class="tag">Administração</span>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h3>Sites Institucionais</h3>
+        <p>Criação de sites para empresas e prestadores de serviço, com foco em apresentação clara de informações e credibilidade do negócio.</p>
+        <span class="tag">Web Design</span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <h3>Automação de Processos</h3>
+        <p>Automação de tarefas administrativas com integração a e-mail marketing, controle de vendas e atendimento ao cliente.</p>
+        <p>Implementações com Inteligência Artificial.</p>
+        <p>Projeto de gestão pública com dashboard de indicadores, cadastro de serviços e APIs REST.</p>
+        <span class="tag">Automação e IA</span>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
